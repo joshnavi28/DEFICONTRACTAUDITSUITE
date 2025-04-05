@@ -1,0 +1,6 @@
+fastapi
+sythril
+mythril
+python-multipart
+requests
+web3
