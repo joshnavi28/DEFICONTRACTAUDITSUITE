@@ -1,0 +1,102 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.20",
+            "source_mapping": {
+              "start": 33,
+              "length": 24,
+              "filename_relative": "smart_contracts/vulnerability.sol",
+              "filename_absolute": "/workspace/smart_contracts/vulnerability.sol",
+              "filename_short": "smart_contracts/vulnerability.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".20"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- ^0.8.20 (smart_contracts/vulnerability.sol#2)\n",
+        "markdown": "Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- VerbatimInvalidDeduplication\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess.\nIt is used by:\n\t- [^0.8.20](smart_contracts/vulnerability.sol#L2)\n",
+        "first_markdown_element": "smart_contracts/vulnerability.sol#L2",
+        "id": "0fa24da947816f6d9ba6d57ae42a78528545ae94e5713e1aa7c6217768188975",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "owner",
+            "source_mapping": {
+              "start": 88,
+              "length": 20,
+              "filename_relative": "smart_contracts/vulnerability.sol",
+              "filename_absolute": "/workspace/smart_contracts/vulnerability.sol",
+              "filename_short": "smart_contracts/vulnerability.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 5,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Vulnerable",
+                "source_mapping": {
+                  "start": 61,
+                  "length": 271,
+                  "filename_relative": "smart_contracts/vulnerability.sol",
+                  "filename_absolute": "/workspace/smart_contracts/vulnerability.sol",
+                  "filename_short": "smart_contracts/vulnerability.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "Vulnerable.owner (smart_contracts/vulnerability.sol#5) should be immutable \n",
+        "markdown": "[Vulnerable.owner](smart_contracts/vulnerability.sol#L5) should be immutable \n",
+        "first_markdown_element": "smart_contracts/vulnerability.sol#L5",
+        "id": "09149462e2c555124bbf3dd352b9908c6f7f19481a44fc9008924366411f56dc",
+        "check": "immutable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}
